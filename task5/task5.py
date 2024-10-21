@@ -11,14 +11,10 @@ d = []
 for _ in range(m):
     c.append(int(input()))
     d.append(int(input()) + t)
-a = sorted(a)
-b = sorted(b)
-c = sorted(c)
-d = sorted(d)
 ans = 0
 first = 0
 second = 0
-for t in list(set(a + b + c + d)):
+for t in sorted(list(set(a + b + c + d))):
     x = b.count(t)
     second += x
     for _ in range(x):
